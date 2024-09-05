@@ -1,0 +1,54 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f3f3f3;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#who-we-are, #values, #projects, #petition {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#who-we-are img {
+    width: 100px;
+    height: auto;
+}
+
+#values article {
+    background-color: #8D5524;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+footer {
+    background-color: #8D5524;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, button {
+    padding: 10px;
+    margin-top: 5px;
+}
+
