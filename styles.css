@@ -42,13 +42,25 @@ section {
     border-bottom: 1px solid #ccc;
 }
 
+section img {
+    width: 100%;  /* Ensures images are responsive */
+    max-height: 300px;  /* Maintains image visibility */
+    object-fit: cover;  /* Ensures images are well fitted */
+}
+
 .dark {
     background-color: #555;
     color: #fff;
 }
 
+.values-container {
+    display: flex;
+    justify-content: space-around;
+}
+
 .value {
-    margin: 20px 0;
+    margin: 20px;
+    flex: 1;
 }
 
 footer {
