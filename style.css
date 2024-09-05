@@ -1,68 +1,63 @@
-* {
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
-body {
-    background-color: #EEE;
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
 
 header {
-    background-color: #FFF;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
 }
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header h1, header nav {
+    display: inline-block;
+    vertical-align: middle;
 }
 
-nav ul {
-    list-style-type: none;
+header nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
     margin-right: 20px;
 }
 
-.section-content {
-    margin: 20px;
-    padding: 20px;
-    background-color: #FFF;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+section {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.dark {
+    background-color: #555;
+    color: #fff;
 }
 
 .value {
-    background-color: #8D5524;
-    color: #FFF;
-    padding: 10px;
+    margin: 20px 0;
 }
 
 footer {
-    background-color: #222;
-    color: #FFF;
+    background: #222;
+    color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 20px 0;
 }
 
-img {
-    width: 100%;
-    height: auto;
+footer form {
+    margin-top: 10px;
 }
-
-form input, form button {
-    width: 100%;
-    paddin
-
-
