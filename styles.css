@@ -8,7 +8,7 @@ body, html {
 .container {
     width: 100%;
     margin: auto;
-    overflow: hidden; /* Ensures that no content spills out */
+    overflow: hidden;
 }
 
 header {
@@ -43,9 +43,8 @@ section {
 }
 
 section img {
-    width: 80%;  /* Adjusts to the width of the container */
-    height: auto;  /* Maintains the aspect ratio */
-    display: block;  /* Removes default inline formatting */
+    width: 80%; /* Full width images */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .dark {
@@ -68,7 +67,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: relative; /* Needed for absolute positioning inside */
+    position: relative;
+    overflow: hidden;
 }
 
 .scrolling-text {
@@ -83,6 +83,8 @@ footer {
     margin: 0;
     line-height: 30px;
     white-space: nowrap;
+    display: inline-block;
+    min-width: 100%;
     animation: scroll-left 20s linear infinite;
 }
 
@@ -96,17 +98,12 @@ footer {
 }
 
 footer form {
-    margin-top: 40px; /* Adjusted to not overlap the scrolling text */
-    z-index: 10; /* Ensure form is above the scrolling text */
+    margin-top: 40px;
+    z-index: 10;
     position: relative;
 }
 
 footer input, footer button {
     padding: 10px;
     margin: 5px;
-}
-
-
-footer form {
-    margin-top: 10px;
 }
