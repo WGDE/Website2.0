@@ -8,7 +8,7 @@ body, html {
 .container {
     width: 80%;
     margin: auto;
-    overflow: hidden;
+    overflow: hidden; /* Ensures that no content spills out */
 }
 
 header {
@@ -43,9 +43,9 @@ section {
 }
 
 section img {
-    width: 100%;  /* Ensures images are responsive */
-    max-height: 300px;  /* Maintains image visibility */
-    object-fit: cover;  /* Ensures images are well fitted */
+    width: 100%;  /* Adjusts to the width of the container */
+    height: auto;  /* Maintains the aspect ratio */
+    display: block;  /* Removes default inline formatting */
 }
 
 .dark {
