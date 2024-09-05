@@ -50,8 +50,8 @@
             <div class="scrolling-text">
                 <p>SIGN OUR PETITION ~ SIGN OUR PETITION ~ SIGN OUR PETITION ~</p>
             </div>
-            <!-- Netlify Form for Email Subscription -->
-            <form name="email-signup" method="POST" netlify netlify-honeypot="bot-field">
+            <!-- Netlify Form for Email Subscription, updated to use the Netlify Function -->
+            <form name="email-signup" method="POST" action="/.netlify/functions/emailLogger">
                 <input type="hidden" name="form-name" value="email-signup">
                 <input type="email" name="email" placeholder="Your Email" required>
                 <button type="submit">Sign Up</button>
