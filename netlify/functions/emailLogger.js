@@ -7,21 +7,22 @@ exports.handler = async function(event, context) {
   }
 
   try {
-    const email = JSON.parse(event.body).email;
-    const file = path.join(process.env.LAMBDA_TASK_ROOT, 'email_log.json');
+    // Ensure the body is parsed correctly
+    const { email } = JSON.parse(event.body);
+    if (!email) {
+      throw new Error("Email is required");
+    }
 
-    // Read existing data
+    const file = path.join(process.env.LAMBDA_TASK_ROOT, 'email_log.json');
     let data;
+
     try {
       data = JSON.parse(await fs.readFile(file, 'utf-8'));
     } catch (error) {
-      data = [];  // If file does not exist or error occurs, start fresh
+      data = [];  // If file does not exist or error occurs, start with an empty array
     }
 
-    // Add new email
     data.push({ email, timestamp: new Date().toISOString() });
-
-    // Write back to file
     await fs.writeFile(file, JSON.stringify(data, null, 2));
 
     return {
@@ -29,9 +30,10 @@ exports.handler = async function(event, context) {
       body: JSON.stringify({ message: "Email logged successfully" })
     };
   } catch (error) {
+    console.error("Error processing request:", error.message);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Failed to process email" })
+      body: JSON.stringify({ error: "Failed to process email", details: error.message })
     };
   }
 };
