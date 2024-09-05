@@ -25,14 +25,14 @@
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <img src="screenshot1.png" alt="Club Member in Engineering Workspace">
+            <img src="screenshot1.png" alt="Club Member in Engineering Workspace" class="full-width">
         </div>
     </section>
 
     <!-- Values Section -->
     <section id="values" class="dark">
         <div class="container">
-            <img src="screenshot2.png" alt="Club Founding Values">
+            <img src="screenshot2.png" alt="Club Founding Values" class="full-width">
         </div>
     </section>
 
@@ -40,19 +40,23 @@
     <section id="projects">
         <div class="container">
             <h2>Current Projects</h2>
-            <img src="screenshot3.png" alt="Current Projects">
+            <img src="screenshot3.png" alt="Current Projects" class="full-width">
         </div>
     </section>
 
-    <!-- Footer Section with Scrolling Text -->
+    <!-- Footer Section with Netlify Forms -->
     <footer>
-        <div class="scrolling-text">
-            <p>SIGN OUR PETITION ~ SIGN OUR PETITION ~ SIGN OUR PETITION ~ SIGN OUR PETITION ~ SIGN OUR PETITION ~</p>
+        <div class="container">
+            <div class="scrolling-text">
+                <p>SIGN OUR PETITION ~ SIGN OUR PETITION ~ SIGN OUR PETITION ~</p>
+            </div>
+            <!-- Netlify Form for Email Subscription -->
+            <form name="email-signup" method="POST" netlify netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="email-signup">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <button type="submit">Sign Up</button>
+            </form>
         </div>
-        <form action="#" method="POST">
-            <input type="email" placeholder="Your Email">
-            <button type="submit">Sign Up</button>
-        </form>
     </footer>
 </body>
 </html>
