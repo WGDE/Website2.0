@@ -3,18 +3,26 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     color: #333;
+    box-sizing: border-box;  /* Ensures padding and borders are included in width calculations */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 .container {
     width: 100%;
+    max-width: 1200px;  /* Ensures container does not grow too wide on large screens */
     margin: auto;
     overflow: hidden;
+    position: relative;  /* For positioning absolute elements like full-width images */
 }
 
 header {
     background: #333;
     color: #fff;
     padding: 20px 0;
+    text-align: center;
 }
 
 header h1, header nav {
@@ -40,11 +48,17 @@ header nav ul li a {
 section {
     padding: 20px 0;
     border-bottom: 1px solid #ccc;
+    overflow: hidden;  /* Contains the floated layout */
 }
 
-section img {
-    width: 80%; /* Full width images */
-    height: auto; /* Maintain aspect ratio */
+section img.full-width {
+    width: 100vw;  /* Sets image width to full viewport width */
+    position: relative;  /* Aligns image correctly in the document flow */
+    left: 50%;  /* Moves the center of the image to the center of the viewport */
+    right: 50%;
+    margin-left: -50vw;  /* Pulls the image back to align its left edge with the viewport */
+    margin-right: -50vw;
+    height: auto;  /* Maintains the aspect ratio of the image */
 }
 
 .dark {
