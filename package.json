@@ -1,7 +1,7 @@
 {
-  "name": "Woman-Gender-Diverse-Engineering-Club",
+  "name": "netlify-email-logging",
   "version": "1.0.0",
   "dependencies": {
-    "@google-cloud/storage": "^5.10.0"  // Or the latest version
+    "@google-cloud/storage": "^5.10.0"
   }
 }
