@@ -1,54 +1,68 @@
-/* Basic resets */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    background-color: #EEE;
 }
 
 header {
-    background-color: #f3f3f3;
+    background-color: #FFF;
     padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#who-we-are, #values, #projects, #petition {
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.section-content {
+    margin: 20px;
     padding: 20px;
-    margin-top: 20px;
+    background-color: #FFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-#who-we-are img {
-    width: 100px;
-    height: auto;
-}
-
-#values article {
-    background-color: #8D5524;
-    color: white;
-    padding: 10px;
-    margin: 10px;
-}
-
-footer {
-    background-color: #8D5524;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
-input, button {
+.value {
+    background-color: #8D5524;
+    color: #FFF;
     padding: 10px;
-    margin-top: 5px;
 }
+
+footer {
+    background-color: #222;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+form input, form button {
+    width: 100%;
+    paddin
+
 
