@@ -6,7 +6,7 @@ exports.handler = async (event) => {
 
   // Initialize Google Cloud Storage with credentials
   const storage = new Storage({ credentials: credentials });
-  const bucket = storage.bucket('email_info');
+  const bucket = storage.bucket('emails_info');
 
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
