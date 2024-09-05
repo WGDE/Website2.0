@@ -1,0 +1,7 @@
+{
+  "name": "Woman-Gender-Diverse-Engineering-Club",
+  "version": "1.0.0",
+  "dependencies": {
+    "@google-cloud/storage": "^5.10.0"  // Or the latest version
+  }
+}
