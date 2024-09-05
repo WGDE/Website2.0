@@ -6,7 +6,7 @@ body, html {
 }
 
 .container {
-    width: 80%;
+    width: 100%;
     margin: auto;
     overflow: hidden; /* Ensures that no content spills out */
 }
@@ -43,7 +43,7 @@ section {
 }
 
 section img {
-    width: 100%;  /* Adjusts to the width of the container */
+    width: 80%;  /* Adjusts to the width of the container */
     height: auto;  /* Maintains the aspect ratio */
     display: block;  /* Removes default inline formatting */
 }
